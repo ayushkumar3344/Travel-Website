@@ -1,0 +1,223 @@
+/* First Attached Google font Link Here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Universal Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+:root{
+
+    /* colors */
+    --blue : #29d9d5;
+    --black : #111;
+    --lighr-color : #aaa;
+    --bg-color : #222;
+    --white : #fff;
+    --black-bg : rgba(17,17,17,.7);
+
+    /* Border Color */
+    --border-color : .2rem solid #29d9d5;
+
+
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--black-bg);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
+
+
+
+/* Main Page Styling Start Here ---> */
+
+body{
+    background: var(--black);
+    overflow-x: hidden;
+}
+
+.btn{
+    margin-top: 0;
+    padding: 1rem 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--blue);
+    border: var(--border-color);
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background: var(--blue);
+    color: var(--black);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: bolder;
+}
+
+.header .logo i{
+    color: var(--blue);
+    padding-right: .5rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--lighr-color);
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: var(--blue);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries Section Start Here ---------> */
+
+
+@media (max-width : 991px) {
+
+    html{
+        font-size: 55%;
+    }
+    
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+}
+
+
+@media (max-width : 768px) {
+
+    #menu-btn{
+        font-size: 2.5rem;
+        color: var(--white);
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        margin: 2rem;
+        font-size: 2rem;
+        display: block;
+    }
+
+}
+
+
+
+@media (max-width : 450px) {
+
+    html{
+        font-size: 50%;
+    }
+    
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
