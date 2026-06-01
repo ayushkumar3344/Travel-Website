@@ -193,6 +193,80 @@ section::before{
     color: var(--lighr-color);
 }
 
+/* Home Section End Here --> */
+
+
+
+/* Book-form Section Start Here  --> */
+
+.book-form{
+    width: 80%;
+    margin: 1rem auto;
+    margin-top: -5rem;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(17,17,17,.3);
+    min-height: 20vh;
+    padding: 3rem 2rem;
+}
+
+.book-form form{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.book-form form .input-box{
+    flex: 1 1 25rem;
+}
+
+.book-form form .input-box span{
+    font-size: 1.4rem;
+    color: var(--lighr-color);
+}
+
+.book-form form .input-box input{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 5rem;
+    border: var(--border-color);
+    font-size: 1.6rem;
+    color: var(--lighr-color);
+    text-transform: none;
+    background: none;
+}
+
+.book-form form .btn{
+    flex:  1 1 15rem;
+    margin-top: 8px;
+}
+
+/* Book-form Section End Here  --> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
