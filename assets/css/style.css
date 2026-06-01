@@ -60,6 +60,13 @@ body{
     overflow-x: hidden;
 }
 
+
+
+
+
+
+/* Header Section -- Start */
+
 .btn{
     margin-top: 0;
     padding: 1rem 3rem;
@@ -70,6 +77,9 @@ body{
     border-radius: 5rem;
     cursor: pointer;
     background: none;
+    position: relative;
+    z-index: 11;
+
 }
 
 .btn:hover{
@@ -121,12 +131,67 @@ body{
 }
 
 
+/* Home Section Start Here ---> */
+section{
+    padding: 3rem 9%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    min-height: 80vh;
+    position: relative;
+    color: white;
+    z-index: 1;
+}
 
+section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: rgba(17,17,17,.6);
+    z-index: -1;
+}
 
+.home{
+    margin: 0 auto;
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
 
+.home .content{
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
 
+.content span{
+    font-weight: bolder;
+    color: transparent;
+    -webkit-text-stroke: .1rem var(--white);
+    font-size: 4vw;
+    display: block;
+}
 
+.content h3{
+    font-size: 6vw;
+    color: var(--white);
+}
 
+.content p{
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 1.4rem;
+    color: var(--lighr-color);
+}
 
 
 
@@ -161,6 +226,11 @@ body{
         padding: 1.5rem 2rem;
     }
 
+    section{
+        padding: 3rem 2rem;
+    }
+
+
 }
 
 
@@ -180,6 +250,7 @@ body{
         right: 0;
         background-color: var(--bg-color);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        z-index: 999999;
     }
 
     .header .navbar.active{
@@ -190,6 +261,22 @@ body{
         margin: 2rem;
         font-size: 2rem;
         display: block;
+    }
+
+    section{
+        z-index: 1;
+    }
+
+    .home{
+        margin-top: 10rem;
+    }
+
+    .home .content span{
+        font-size: 8vw;
+    }
+
+    .home .content h3{
+        font-size: 9vw;
     }
 
 }
@@ -204,6 +291,14 @@ body{
     
     .header{
         padding: 1.5rem 2rem;
+    }
+
+    .header .navbar{
+        z-index: 99999;
+    }
+
+    section{
+        z-index: 1;
     }
 
 }
