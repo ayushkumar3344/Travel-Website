@@ -7,3 +7,20 @@ menuBtn.addEventListener("click",() => {
     navbar.classList.toggle("active");
 })
 
+
+
+// ---> Video Section Logic <---
+
+const controlsBtn = document.querySelectorAll(".about .video-container .controls .control-btn");
+const mainVideo = document.querySelector(".about .video-container .video")
+
+
+
+controlsBtn.forEach((btn) => {
+    btn.addEventListener("click",() => {
+        let src = btn.getAttribute("data-src");
+        mainVideo.src = src;
+    })
+})
+
+// Video Logic End --->
