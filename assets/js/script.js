@@ -12,7 +12,7 @@ menuBtn.addEventListener("click",() => {
 // ---> Video Section Logic <---
 
 const controlsBtn = document.querySelectorAll(".about .video-container .controls .control-btn");
-const mainVideo = document.querySelector(".about .video-container .video")
+const mainVideo = document.querySelector(".about .video-container .video");
 
 
 
