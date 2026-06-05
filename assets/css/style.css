@@ -479,9 +479,40 @@ section::before {
 /* Services Section -- ( End Here ) */
 
 
+.gallery{
+  display: flex;
+  flex-direction: column;
+}
 
+.gallery .box-container{
+  columns: 3 25rem;
+  column-gap: 1.5rem;
 
+  .box{
+    margin-bottom: 1rem;
+    break-inside: avoid;
 
+    img{
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    span{
+      font-size: 1.4rem;
+      color: var(--lighr-color);
+    }
+
+    h3{
+      margin-top: .5rem;
+      font-size: 2rem;
+      color: var(--white);
+    }
+
+  }
+}
+
+/* Services Section -- ( End Here ) */
 
 
 
