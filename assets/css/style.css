@@ -430,8 +430,6 @@ section::before {
 
 /* Services Section -- ( Start Here ) */
 
-/* SERVICES SECTION */
-
 .services {
     padding: 5rem 8%;
     display: flex;
@@ -478,7 +476,7 @@ section::before {
     line-height: 1.7;
 }
 
-
+/* Services Section -- ( End Here ) */
 
 
 
