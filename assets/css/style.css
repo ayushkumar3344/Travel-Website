@@ -653,6 +653,79 @@ section::before {
     margin-right: .5rem;
 }
 
+/* Initial State */
+
+.blog .box{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+/* Visible State */
+
+.blog .box.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effect */
+
+.blog .box{
+    transition: all 0.4s ease;
+}
+
+.blog .box:hover{
+    transform: translateY(-12px);
+}
+
+/* Image Zoom */
+
+.blog .images{
+    overflow: hidden;
+}
+
+.blog .images img{
+    transition: 0.6s ease;
+}
+
+.blog .box:hover .images img{
+    transform: scale(1.1);
+}
+
+/* Link Hover */
+
+.blog .link{
+    transition: 0.3s ease;
+}
+
+.blog .link:hover{
+    color: #29d9d5;
+}
+
+/* --> */
+
+.blog .box{
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+.blog .box:nth-child(1){
+    transform: translateX(-120px);
+}
+
+.blog .box:nth-child(2){
+    transform: translateY(100px);
+}
+
+.blog .box:nth-child(3){
+    transform: translateX(120px);
+}
+
+.blog .box.show{
+    opacity: 1;
+    transform: translate(0);
+}
+
 /* Blog Section (End Here */
 
 
@@ -771,6 +844,75 @@ section::before {
 .footer .btn:hover{
     background: #1fc5c1;
 }
+
+/* Footer Reveal Animation */
+
+.footer .box{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all .8s ease;
+}
+
+.footer .box.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Social Icons Animation */
+
+.footer .share a{
+    transition: all .4s ease;
+}
+
+.footer .share a:hover{
+    transform: translateY(-8px) rotate(360deg);
+}
+
+/* Quick Links Animation */
+
+.footer .links{
+    transition: all .3s ease;
+}
+
+.footer .links:hover{
+    padding-left: 10px;
+}
+
+/* Newsletter Input */
+
+.footer .email{
+    transition: .3s ease;
+}
+
+.footer .email:focus{
+    transform: scale(1.03);
+}
+
+
+/* ---> */
+
+.footer .box:nth-child(1){
+    transform: translateX(-100px);
+}
+
+.footer .box:nth-child(2){
+    transform: translateY(100px);
+}
+
+.footer .box:nth-child(3){
+    transform: translateY(-100px);
+}
+
+.footer .box:nth-child(4){
+    transform: translateX(100px);
+}
+
+.footer .box.show{
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* --------> footer animation code is Done */
 
 .credit{
     background: #0a0a0a;

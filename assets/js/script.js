@@ -242,3 +242,89 @@ galleryBoxes.forEach(box => {
 
 
 // --------------------------->
+
+
+// Blog Section Animation Code is--->
+
+// Blog Section Animation
+
+const blogBoxes = document.querySelectorAll('.blog .box');
+
+const blogObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 250);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+blogBoxes.forEach(box => {
+    blogObserver.observe(box);
+});
+
+
+// -------------------------->
+
+// Footer Section JavaScript Code Is ---------->
+
+// Footer Animation
+
+const footerBoxes = document.querySelectorAll('.footer .box');
+
+const footerObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 200);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.3
+});
+
+footerBoxes.forEach(box => {
+    footerObserver.observe(box);
+});
+
+
+// Newsletter Form Animation
+
+const form = document.querySelector('.footer form');
+
+if(form){
+
+    form.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        const btn = form.querySelector('.btn');
+
+        btn.value = 'Subscribed ✓';
+
+        setTimeout(() => {
+            btn.value = 'Subscribe';
+        }, 3000);
+
+    });
+
+}
+
+
+// Finally all animation code is done -->
