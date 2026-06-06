@@ -144,3 +144,69 @@ destinationBoxes.forEach(box => {
 });
 
 // ------------>
+
+
+// Services Section Javascript Code is --->
+
+// Service Cards Animation
+
+const serviceBoxes = document.querySelectorAll('.services .box');
+
+const serviceObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 200);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+serviceBoxes.forEach(box => {
+    serviceObserver.observe(box);
+});
+
+
+// Hover Effect
+
+serviceBoxes.forEach(box => {
+
+    box.addEventListener('mouseenter', () => {
+        box.style.transform = 'translateY(-10px)';
+    });
+
+    box.addEventListener('mouseleave', () => {
+        box.style.transform = 'translateY(0)';
+    });
+
+});
+
+
+// Service Button Click Effect
+
+const serviceBtns = document.querySelectorAll('.services .btn');
+
+serviceBtns.forEach(btn => {
+
+    btn.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        const serviceName =
+            btn.closest('.box').querySelector('h3').innerText;
+
+        alert(`You selected: ${serviceName}`);
+
+    });
+
+});
+
+// ----------------->

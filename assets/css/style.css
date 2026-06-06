@@ -476,6 +476,25 @@ section::before {
     line-height: 1.7;
 }
 
+.services .box{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .8s ease;
+}
+
+.services .box.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services .box{
+    transition: .4s ease;
+}
+
+.services .box:hover{
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
 /* Services Section -- ( End Here ) */
 
 
