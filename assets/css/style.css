@@ -531,6 +531,39 @@ section::before {
   }
 }
 
+/* Initial State */
+
+.gallery .box{
+    opacity: 0;
+    transform: translateY(80px) scale(0.9);
+    transition: all 0.8s ease;
+}
+
+/* Active State */
+
+.gallery .box.show{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.gallery .box{
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+.gallery .box:nth-child(odd){
+    transform: translateX(-100px);
+}
+
+.gallery .box:nth-child(even){
+    transform: translateX(100px);
+}
+
+.gallery .box.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* -------------> */
 
 /* Blog Section Start Here ---> */

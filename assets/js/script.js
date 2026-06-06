@@ -210,3 +210,35 @@ serviceBtns.forEach(btn => {
 });
 
 // ----------------->
+
+
+// Gallery Section javascript code --->
+
+// Gallery Enter Animation
+
+const galleryBoxes = document.querySelectorAll('.gallery .box');
+
+const galleryObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 150);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+galleryBoxes.forEach(box => {
+    galleryObserver.observe(box);
+});
+
+
+// --------------------------->
