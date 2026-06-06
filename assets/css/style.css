@@ -512,9 +512,96 @@ section::before {
   }
 }
 
-/* Services Section -- ( End Here ) */
+/* -------------> */
 
+/* Blog Section Start Here ---> */
 
+.blog{
+    padding: 5rem 9%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.blog .box{
+    background: rgb(26, 26, 26);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    transition: .3s ease;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.blog .box:hover{
+    transform: translateY(-10px);
+}
+
+.blog .box .images{
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog .box .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.blog .box:hover .images img{
+    transform: scale(1.1);
+}
+
+.blog .box .link{
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.blog .box .link:hover{
+    color: #29d9d5;
+}
+
+.blog .box p{
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.blog .box .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.blog .box .icon a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.blog .box .icon a i{
+    color: #29d9d5;
+    margin-right: .5rem;
+}
+
+/* Blog Section (End Here */
 
 
 
@@ -555,6 +642,18 @@ section::before {
 
     .destination .box .image{
         height: 220px;
+  }
+
+  .blog{
+        padding: 4rem 5%;
+    }
+
+    .blog .heading h1{
+        font-size: 2.3rem;
+    }
+
+    .blog .box-container{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
@@ -622,6 +721,23 @@ section::before {
 
     .services .box {
         padding: 1.8rem;
+  }
+
+  .blog .heading h1{
+        font-size: 2rem;
+    }
+
+    .blog .box .images{
+        height: 220px;
+    }
+
+    .blog .box .link{
+        font-size: 1.2rem;
+    }
+
+    .blog .box .icon{
+        flex-direction: column;
+        align-items: flex-start;
   }
 }
 
@@ -695,5 +811,29 @@ section::before {
     .services .box p {
         font-size: 0.95rem;
   }
+
+  .blog{
+        padding: 3rem 1rem;
+    }
+
+    .blog .heading span{
+        font-size: 1.1rem;
+    }
+
+    .blog .heading h1{
+        font-size: 1.7rem;
+    }
+
+    .blog .box .images{
+        height: 200px;
+    }
+
+    .blog .box p{
+        font-size: .9rem;
+    }
+
+    .blog .box .icon a{
+        font-size: .85rem;
+    }
 
 }
