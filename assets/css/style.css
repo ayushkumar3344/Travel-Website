@@ -425,6 +425,58 @@ section::before {
     transition: 0.3s;
 }
 
+/* Initial State */
+
+.destination .box{
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+/* Different Enter Directions */
+
+.destination .box:nth-child(odd){
+    transform: translateX(-100px);
+}
+
+.destination .box:nth-child(even){
+    transform: translateX(100px);
+}
+
+/* Show Animation */
+
+.destination .box.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hover Effect */
+
+.destination .box{
+    overflow: hidden;
+}
+
+.destination .image{
+    overflow: hidden;
+}
+
+.destination .image img{
+    transition: .6s ease;
+}
+
+.destination .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.destination .box:hover{
+    transform: translateY(-10px);
+}
+
+/* more destination code is ---> */
+
+
+
+/*  */
+
 /* Destination section End Here ---> */
 
 

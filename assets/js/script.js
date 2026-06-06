@@ -189,6 +189,38 @@ serviceBoxes.forEach(box => {
 
 });
 
+// Destination Section Animation code is --->
+
+// Destination Section Animation
+
+const destinationCards = document.querySelectorAll('.destination .box');
+
+const destinationObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 150);
+
+            destinationObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+destinationCards.forEach(card => {
+    destinationObserver.observe(card);
+});
+
+
+// --->
+
 
 // Service Button Click Effect
 
