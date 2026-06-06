@@ -71,3 +71,76 @@ document.querySelector('.btn').addEventListener('click', (e) => {
     }
 
 });
+
+
+
+
+// Destination Section Javascript code isss ---->
+
+// Destination Cards Animation
+
+const destinationBoxes = document.querySelectorAll('.destination .box');
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 150);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+destinationBoxes.forEach(box => {
+    observer.observe(box);
+});
+
+
+// Read More Button Click
+
+const readMoreBtns = document.querySelectorAll('.destination .content a');
+
+readMoreBtns.forEach(btn => {
+
+    btn.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        const destinationName =
+            btn.parentElement.querySelector('h3').innerText;
+
+        alert(`Explore more about ${destinationName}`);
+
+    });
+
+});
+
+
+// Card Hover Animation
+
+destinationBoxes.forEach(box => {
+
+    box.addEventListener('mouseenter', () => {
+
+        box.style.transform = 'translateY(-12px)';
+        box.style.transition = '0.4s ease';
+
+    });
+
+    box.addEventListener('mouseleave', () => {
+
+        box.style.transform = 'translateY(0)';
+
+    });
+
+});
+
+// ------------>
